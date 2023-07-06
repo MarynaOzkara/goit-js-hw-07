@@ -17,9 +17,9 @@ const markup = galleryItems.map(({preview, original, description}) =>
 ).join('');
 galleryList.insertAdjacentHTML('beforeend', markup);
 
-galleryList.addEventListener('click', selectedItem);
+galleryList.addEventListener('click', onClick);
 
-function selectedItem(event) {
+function onClick(event) {
     event.preventDefault();
     if(event.target.nodeName !== "IMG") {
         return;
